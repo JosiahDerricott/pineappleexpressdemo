@@ -3352,7 +3352,7 @@ html.sticky-header-enabled.sticky-header-active #header .header-logo-sticky-chan
 	}
 
 	#header .header-nav-main nav > ul > li > a.active {
-		color: #0D0809 !important;
+		color: #f7f7f7 !important; //
 		background: #CCC;
 	}
 

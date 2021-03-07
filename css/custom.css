@@ -339,3 +339,9 @@ html body .tabs.tabs-vertical.tabs-left .nav-tabs li .nav-link:hover {
 #footer .social-icons li a {
     color: #7A7A7A !important;
 }
+
+/* Mobile */
+
+#header .header-btn-collapse-nav {
+    background: #BF211E;
+}
