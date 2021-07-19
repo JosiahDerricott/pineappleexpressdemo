@@ -4,6 +4,36 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Video background */
+.ParallaxVideo{
+    height: 300px;
+    padding-bottom: 50px;
+    display:block;
+}
+
+.ParallaxVideo img {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top:0;
+    opacity: 0.75;
+    z-index: 1;
+}
+
+.ParallaxVideo video{
+    min-width: 100%;
+    position: relative;
+    top:0;
+    z-index: 1;
+}
+.ParallaxVideo h1 {
+  color: #fff;
+  font-size: 76px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .fix-scroll {
   margin-top: 66px !important;
   padding-top: -66px !important;
