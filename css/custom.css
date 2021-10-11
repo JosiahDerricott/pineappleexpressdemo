@@ -296,6 +296,32 @@ section.section {
   color: #0D0809 !important;
 }
 
+.form-group input:focus::placeholder {
+  color: transparent;
+}
+
+.form-group textarea:focus::placeholder {
+  color: transparent;
+}
+
+.form-group textarea:focus::-webkit-input-placeholder { color:transparent; }
+.form-group textarea:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+.form-group textarea:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+.form-group textarea:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+.form-group textarea:focus::-webkit-input-placeholder { color:transparent; }
+.form-group textarea:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+.form-group textarea:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+.form-group textarea:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+.form-control {
+  color: #f7f7f7;
+}
+
+.form-control:focus {
+  color: #f7f7f7;
+}
+
 .custom-form-style-1 textarea.form-control {
     height: 12rem;
 }
