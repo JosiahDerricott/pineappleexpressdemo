@@ -4,6 +4,41 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 400px)
+{
+  p {
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  h5 {
+    text-align: center;
+  }
+
+  a {
+    text-align: center;
+  }
+
+  .text-center-mobile {
+    text-align: center;
+  }
+}
+
 /* Video background */
 .ParallaxVideo{
     height: 300px;
@@ -56,6 +91,18 @@ html .text-color-secondary {
   color: #BF211E !important
 }
 
+/* UTILS */
+
+@media (max-width: 400px) {
+  .mobile-hide {
+    display: none;
+  }
+}
+
+.no-pad {
+  padding: 0 0 0 0;
+}
+
 /* Header */
 
 .logo-mobile {
@@ -64,8 +111,8 @@ html .text-color-secondary {
 
 .logo-desktop {
   display: block;
-  width: 123px;
-  height: 63px;
+  width: 98px;
+  height: 71px;
 }
 
 @media (max-width: 400px) {
@@ -75,6 +122,8 @@ html .text-color-secondary {
 
   .logo-mobile {
     display: block;
+    width: 49px;
+    height: 36px;
   }
 }
 
