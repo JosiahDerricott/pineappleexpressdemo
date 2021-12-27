@@ -11,7 +11,7 @@ html {
   }
 }
 
-@media (max-width: 400px)
+@media (max-width: 460px)
 {
   p {
     text-align: center;
