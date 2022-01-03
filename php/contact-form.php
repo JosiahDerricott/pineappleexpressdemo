@@ -20,14 +20,20 @@ require 'php-mailer/src/Exception.php';
 require 'php-mailer/src/SMTP.php';
 
 // Step 1 - Enter your email address below.
-$email = 'info@example.com';
+$email = 'info@pineappleexpressautosalon.com';
 
 // If the e-mail is not working, change the debug option to 2 | $debug = 2;
 $debug = 0;
 
-// If contact form don't has the subject input change the value of subject here
-$subject = ( isset($_POST['subject']) ) ? $_POST['subject'] : 'No Subject Given';
+// If contact form doesn't have the subject input change the value of subject here
+$subject = ( isset($_POST['subject']) ) ? $_POST['subject'] : 'New Client Submission';
 
+$name = $_POST['name'];
+$service = $_POST['service'];
+$size = $_POST['size'];
+$customer_msg = $_POST['message'];
+
+//$message = 'Customer name: ' + $name + '\nService requested: ' + $service + '\nVehicle Size: ' + $size + '\nMessage: ' + $customer_msg;
 $message = 'This is a placeholder. Will build email once it goes through.';
 
 foreach($_POST as $label => $value) {
@@ -71,7 +77,7 @@ try {
 	//$mail->AddBCC('person4@domain.com', 'Person 4');         // Add a "Bcc" address.
 
 	// From - Name
-	$fromName = ( isset($_POST['name']) ) ? $_POST['name'] : 'Website User';
+	$fromName = ( isset($_POST['name']) ) ? $_POST['name'] : 'New Client Submission';
 	$mail->SetFrom($email, $fromName);
 
 	// Repply To
