@@ -26,33 +26,32 @@ $email = 'info@pineappleexpressautosalon.com';
 $debug = 0;
 
 // If contact form doesn't have the subject input change the value of subject here
-$subject = ( isset($_POST['subject']) ) ? $_POST['subject'] : 'New Client Submission';
+$subject = ( isset($_POST['subject']) ) ? $_POST['subject'] : 'New Service Request';
 
 $name = $_POST['name'];
 $service = $_POST['service'];
 $size = $_POST['size'];
-$customer_msg = $_POST['message'];
+$customer_msg = ( isset($_POST['message']) ) ? $_POST['message'] : 'New service info requested.';
 
-//$message = 'Customer name: ' + $name + '\nService requested: ' + $service + '\nVehicle Size: ' + $size + '\nMessage: ' + $customer_msg;
-$message = 'This is a placeholder. Will build email once it goes through.';
+$message = '\nCustomer Name: ' + $name + '\nService Requested: ' + $service + '\nVehicle Size: ' + $size + '\nMessage: ' + $customer_msg;
 
-foreach($_POST as $label => $value) {
-	$label = ucwords($label);
-
-	// Use the commented code below to change label texts. On this example will change "Email" to "Email Address"
-
-	// if( $label == 'Email' ) {
-	// 	$label = 'Email Address';
-	// }
-
-	// Checkboxes
-	if( is_array($value) ) {
-		// Store new value
-		$value = implode(', ', $value);
-	}
-
-	$message .= $label.": " . htmlspecialchars($value, ENT_QUOTES) . "<br>\n";
-}
+// foreach($_POST as $label => $value) {
+// 	$label = ucwords($label);
+//
+// 	// Use the commented code below to change label texts. On this example will change "Email" to "Email Address"
+//
+// 	// if( $label == 'Email' ) {
+// 	// 	$label = 'Email Address';
+// 	// }
+//
+// 	// Checkboxes
+// 	if( is_array($value) ) {
+// 		// Store new value
+// 		$value = implode(', ', $value);
+// 	}
+//
+// 	$message .= $label.": " . htmlspecialchars($value, ENT_QUOTES) . "<br>\n";
+// }
 
 $mail = new PHPMailer(true);
 
@@ -77,7 +76,7 @@ try {
 	//$mail->AddBCC('person4@domain.com', 'Person 4');         // Add a "Bcc" address.
 
 	// From - Name
-	$fromName = ( isset($_POST['name']) ) ? $_POST['name'] : 'New Client Submission';
+	$fromName = ( isset($_POST['name']) ) ? $_POST['name'] : 'New Service Request';
 	$mail->SetFrom($email, $fromName);
 
 	// Repply To
